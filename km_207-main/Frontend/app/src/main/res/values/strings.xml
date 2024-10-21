@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">frontEnd</string>
+    <string-array name="majors_array">
+        <item>Select Major</item>
+        <item>COM S</item>
+        <item>S E</item>
+    </string-array>
+    <string-array name="courses_array">
+        <item>Select Course</item>
+        <item>Com S 101</item>
+        <item>Com S 311</item>
+        <item>Com S 321</item>
+        <item>Com S 309</item>
+    </string-array>
+</resources>

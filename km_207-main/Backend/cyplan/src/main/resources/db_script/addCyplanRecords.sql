@@ -1,0 +1,307 @@
+INSERT INTO degrees
+VALUES
+    ("Computer Science", "COM S", "LAS"),
+    ("Softawre Engineering", "S E", "Engineering"),
+    ("Mathematics", "MATH", "LAS");
+
+INSERT INTO users
+VALUES
+    (1, "Tanner", "trs3103@iastate.edu", "S E", "student", "666"),
+    (2, "Paige", "prolling@iastate.edu", "COM S", "student", "123"),
+    (3, "Kayley", "kclark@iastate.edu", "S E", "student", "123"),
+    (4, "Logan", "lte@iastate.edu", "COM S", "student", "123"),
+    (5, "TEST", "TEST@iastate.edu", "COM S", "student", "123");
+
+INSERT INTO courses
+VALUES
+    ("AF AM 201", "Introduction to African American Studies", "DESC", "", "", 3, "F,S", 0, 0),
+    ("AM IN 205", "American Indians in the Movies", "DESC", "", "", 3, "SS", 0, 0), -- offered irregularly
+    ("ARCH 321", "History of the American City", "DESC", "", "", 3, "", 0, 0), -- sophomore classification
+    ("ART H 280", "History of Art I", "DESC", "", "", 3, "F", 0, 0),
+    ("BIOL 211", "Principles of Biology I", "DESC", "", "", 3, "F,S", 0, 0), -- prereq of high school biology
+    ("BIOL 211L", "Principles of Biology Labratory I", "DESC", "", "BIOL 211", 1, "F,S", 0, 0),
+    ("BIOL 212", "Principles of Biology II", "DESC", "CHEM 163;CHEM 177", "", 3, "F,S", 0, 0), -- bunch of high school prereq garbage
+    ("BIOL 212L", "Principles of Biology Laboratory II", "DESC", "", "BIOL 212", 1, "F,S", 0, 0),
+    ("COM S 101", "Orientation", "Required orientation class for all incoming students in the Computer Science major. Topics include academic planning and policies, campus resources, and supports. Opportunity to connect with other computer science peers, faculty, alumni, and employers. Offered on a satisfactory-fail basis only.", "", "", 0, "F,S", 0, 0),
+    ("COM S 127", "Introduction to Computer Programming", "Introduction to computer programming with an emphasis on problem-solving. Topics include: program structures, expressions, variables, decision and logic, iteration, collections, input, and output. Program construction and testing. Programming assignments including games and applications. No prior programming experience necessary.", "", "", 3, "F,S", 0, 0),
+    ("COM S 227", "Object-oriented Programming", "Computer programming using objects as the mechanism for modularity, abstraction, and code reuse. Instance variables, methods, and encapsulation. Review of control structures for conditionals and iteration. Developing algorithms on strings, arrays, and lists. Recursion, searching, and sorting. Text parsing and file I/O. Interfaces, inheritance, polymorphism, and abstract classes. Exception handling. Tools for unit testing and debugging. Emphasis on a disciplined approach to specification, code development, and testing. Course intended for majors in computer science and related fields. Credit may not be applied toward graduation for both Com S 207 and 227.", "COM S 127;CPRE 185;SE 185", "MATH 143", 4, "F,S,SS", 0, 0),
+    ("COM S 228", "Introduction to Data Structures", "An object-oriented approach to data structures and algorithms. Object-oriented analysis, design, and programming, with emphasis on data abstraction, inheritance and subtype polymorphism, and generics. Abstract data type specification and correctness. Collections including lists, stacks, queues, trees, heaps, maps, hash tables, and graphs. Big-O notation and algorithm analysis. Searching and sorting. Graph search and shortest path algorithms. Emphasis on object-oriented design, writing and documenting medium-sized programs. This course is designed for majors.", "COM S 227", "MATH 165", 3, "F,S,SS", 0, 0),
+    ("COM S 230", "Discrete Computational Structures", "Concepts in discrete mathematics as applied to computer science. Logic, set theory, functions, relations, cardinality of sets, combinatorics, graph theory and number theory. Proof techniques, induction and recursion.", "COM S 228, MATH 165", "", 3, "F,S,SS", 0, 0),
+    ("COM S 252", "Linux Operating System Essentials", "Introduction to installation, utilization, and administration of Linux systems. Topics include open-source software, package installation and management, shell programming and command-line utilities, process and service management, account management, network configuration, file sharing, interoperation with other computers and operating systems, automation, and system security.", "COM S 227; COM S 127", "COM S 228", 3, "F,S", 0, 0),
+    ("COM S 309", "Software Development Practices", "Practical introduction to methods for managing software development. Software engineering concepts, practices and tools. Requirements analysis, structured and object-oriented design, coding, testing, and maintenance. Software process models, software tools and environments. Programming projects that provide exposure to information management techniques, client/server model, networking and communication.", "COM S 228, MATH 165", "", 3, "F,S", 0, 0),
+    ("COM S 311", "Introduction to the Design and Analysis of Algorithms", "DESC", "COM S 228, MATH 166, COM S 230:CPRE 301, ENGL 150", "", 3, "F,S,SS", 0, 0),
+    ("COM S 319", "Construction of User Interfaces", "DESC", "COM S 228", "", 3, "F,S", 0, 0),
+    ("COM S 321", "Introduction to Computer Architecture and Machine-Level Programming", "DESC", "COM S 228, MATH 165, COM S 230;CPRE 281, ENGL 250", "", 3, "F,S", 0, 0),
+    ("COM S 327", "Advanced Programming Techniques", "DESC", "COM S 228, MATH 165", "", 3, "F,S", 0, 0),
+    ("COM S 331", "Theory of Computing", "DESC", "COM S 228, MATH 166, ENGL 250, COM S 230;CPRE 310", "", 3, "F,S", 0, 0),
+    ("COM S 336", "Introduction to Computer Graphics", "DESC", "COM S 327;CPRE 288", "MATH 207;MATH 265;MATH 317", 3, "F", 0, 0),
+    ("COM S 342", "Principles of Programming Languages","DESC", "COM S 228, MATH 165, COM S 230;CPRE 310", "", 3, "F,S", 0, 0),
+    ("COM S 350", "Number Theory", "DESC", "COM S 230;CPRE 310;MATH 201", "", 3, "S", 0, 0),
+    ("COM S 352", "Introduction to Operating Systems", "DESC", "COM S 321;CPRE 381, COM S 327;CPRE 288, ENGL 250", "", 3, "F,S", 0, 0),
+    ("COM S 402", "Computer Science Senior Project", "DESC", "COM S 309, COM S 311, COM S 321, COM S 331", "", 3, "F,S", 0, 0), -- This one is a clusterfuck (so many edge cases with "could be 402A, 402B, 402C", and "can be worth 2 to 3 credits", and "up to 6 credits can be taken"
+    ("COM S 410", "Distributed Development of Software", "DESC", "COM S 309, COM S 327;CPRE 288", "", 3, "", 0, 0),
+    ("COM S 412", "Formal Methods in Software Engineering", "DESC", "COM S 311, STAT 305;STAT 330;STAT 341", "", 3, "", 0, 0),
+    ("COM S 413", "Program Analysis", "DESC", "COM S 327;CPRE 288, COM S 342", "", 3, "", 0, 0),
+    ("COM S 417", "Software Testing", "DESC", "COM S 309, COM S 230:CPRE 310, ENGL 250", "", 3, "", 0, 0),
+    ("CL ST 273", "Greek and Roman Mythology", "DESC", "", "", 3, "", 0, 0),
+    ("ENGL 150", "Critical Thinking and Communication", "DESC", "", "", 3, "F,S,SS", 0, 0),
+    ("ENGL 250", "WOVE Composition", "DESC", "ENGL 150", "LIB 160", 3, "F,S,SS", 0, 0), -- sophomore classificiation required
+    ("ENGL 302", "Business Communication", "DESC", "ENGL 250", "", 3, "F,S,SS", 0, 0), -- Junior Classification
+    ("ENGL 305", "Creative Writting Nonfiction", "DESC", "ENGL 250", "", 3, "F,S", 0, 0), -- Sophomore Classification
+    ("ENGL 309", "Proposal and Report Writting", "DESC", "ENGL 250", "", 3, "F,S", 0, 0), -- Junior Classification
+    ("ENGL 314", "Technical Communication", "DESC", "ENGL 250", "", 3, "F,S,SS", 0, 0), -- Junior Classification
+    ("HIST 201", "Introduction to Western Civilization I", "DESC", "", "", 3, "F", 0, 0),
+    ("HIST 353", "History of African Americans I", "DESC", "", "", 3, "", 0, 0), -- sophomore classification
+    ("PHIL 343", "Philosophy of Technology", "DESC", "", "", 3, "F,S", 0, 0),
+    ("SP CM 212", "Fundamentals of Public Speaking", "DESC", "", "", 3, "F,S,SS", 0, 0),
+    ("STAT 330", "Probability and Statistics for Computer Science", "DESC", "MATH 166", "", 3, "F,S,SS", 0, 0),
+    ("STAT 341", "Introduction to the Theory of Probability and Statistics I", "DESC", "MATH 265", "", 4, "F,S", 0, 0),
+    ("STAT 347", "Probability and Statistical Theory for Data Science", "DESC", "MATH 207;MATH 317, MATH 265, STAT 301;STAT 326", "", 4, "F", 0, 0),
+    ("LAS 203", "Professional Career Preperation", "DESC", "", "", 1, "F,S,SS", 0, 0), -- sophomore or higher clasification is a prereq
+    ("LIB 160", "Introduction to College Level Research", "DESC", "ENGL 101", "", 1, "F,S,SS", 0, 0),
+    ("MATH 143", "Preperation for Calculus", "DESC", "", "", 4, "F,S", 0, 0), -- This has a prereq for MATH 140 or high enough placement on test but I ommitted it because a lot of people test out and we don't support test out yet. Though come back and add that later
+    ("MATH 165", "Calculus I", "Basic Calculus provides an introduction to differential and integral calculus. Applications of differentiation, including optimization, are explored.", "", "", 3, "F,S,SS", 0, 0), -- requires MATH 143 OR high enough performance on placement assesment
+    ("MATH 166", "Calculus II", "An exploration of advanced techniques of integration. Applications of integration, including geometry, physics, polar coordinates and parametric curves, are explored. Power series are introduced and applications of approximating functions are given.", "MATH 165", "", 3, "F,S,SS", 0, 0),
+    ("MATH 207", "Matricies and Linear Algebra", "DESC", "MATH 166", "", 3, "F,S,SS", 0, 0),
+    ("MATH 265", "Calculus III", "DESC", "MATH 166", "", 4, "F,S,SS", 0, 0),
+    ("MATH 266", "Elementary Differential Equations", "DESC", "MATH 166", "", 3, "F,S,SS", 0, 0),
+    ("MATH 267", "Elementary Differential Equations and Laplace Transforms", "DESC", "MATH 166", "", 4, "F,S,SS", 0, 0),
+    ("MATH 304", "Combinatorics", "DESC", "MATH 166, MATH 201;COM S 230;CPRE 310", "", 3, "F", 0, 0),
+    ("MATH 314", "Graph Theory", "DESC", "MATH 166, MATH 201;COM S 230;CPRE 310", "", 3, "S", 0, 0),
+    ("MATH 317", "Thoery of Linear Algebra", "DESC", "", "MATH 201;COM S 230;CPRE 310", 4, "F,S", 0, 0),
+    -- adding in for software engineering
+    ("ECON 101", "Principles of Microeconomics", "DESC", "", "", 3, "F,S,SS", 0, 0),
+    ("ECON 102", "Principles of Macroeconomics", "DESC", "", "", 3, "F,S,SS",0,0),
+    ("IE 305", "Engineering Economic Analysis", "DESC", "", "", 3, "F,S,SS", 0, 0),
+    ("CHEM 167", "General Chemistry for Enginering Students", "DESC", "", "", 4, "F,S", 0,0),
+    ("CHEM 177", "General Chemistry 1","DESC", "", "CHEM 177L", 3, "F,S,SS", 0,0),
+    ("CHEM 177L", "General Chemistry 1 Lab","DESC", "", "CHEM 177", 1, "F,S,SS", 0, 0),
+    ("SE 101", "Software Engineering Orientation","Introduction to the procedures, policies, and resources of Iowa State University and the Software Engineering Program. Offered on a satisfactory-fail basis only.", "", "", 0, "F,S", 0, 0 ),
+    -- math prereq question ("SE 185", "Problem Solving in Software Engineering", "Introduction to software engineering and computer programming. Systematic thinking process for problem solving in the context of software engineering. Group problem solving. Solving software engineering problems and presenting solutions through computer programs, written documents and oral presentations. Introduction to principles of programming, software design, and extensive practice in design, writing, running, debugging, and reasoning about programs.", "", "", 3, "F, S", 0,0),
+    ("PHYS 231", "Introduction to Classical Physics 1", "DESC", "MATH 165", "MATH 166",4,"F,S,SS",0,0),
+    ("PHYS 231L", "Introduction to Classical Physics 1 Laboratory", "DESC", "MATH 165", "PHYS 231", 1, "F,S,SS",0,0),
+    --CPRE
+    ("CPR E 281", "Digital Logic", "Number systems and representation. Boolean algebra and logic minimization. Combinational and sequential logic design. Arithmetic circuits and finite state machines. Use of programmable logic devices. Introduction to computer-aided schematic capture systems, simulation tools, and hardware description languages. Design of simple digital systems.", "", "", 4,"F,S",0,0), -- sophmore classification
+    ("CPR E 288", "Emedded Systems 1: Introduction", "Embedded C programming. Interrupt handling. Memory mapped I/O in the context of an application. Elementary embedded design flow/methodology. Timers, scheduling, resource allocation, optimization, state machine based controllers, real time constraints within the context of an application. Applications laboratory exercises with embedded devices.", "CPR E 281, COM S 227", 4, "F,S", 0, 0),
+    ("CPR E 381", "Computer Organization and Assembly Level Programming", "Introduction to computer organization, evaluating performance of computer systems, instruction set design. Assembly level programming: arithmetic operations, control flow instructions, procedure calls, stack management. Processor design. Datapath and control, scalar pipelines, introduction to memory and I/O systems.", "CPR E 288", "", 4, 0, 0),
+    ("CPR E 308", "Operating Systems: Principles and Practice", "Operating system concepts, processes, threads, synchronization between threads, process and thread scheduling, deadlocks, memory management, file systems, I/O systems,security, Linux-based lab experiments.", "COM S 321;CPR E 381", "", 4, "F,S", 0, 0),
+    ("CPR E 310", "Theoretical Foundations of Computer Engineering", "Propositional logic and methods of proof; basic discrete structures; mathematical induction and recurrence relations; functions and relations; and counting; trees and graphs; applications in computer engineering.", "COM S 228", "", 3, "F,S", 0,0),
+    ("SE 317", "Introduction to Software Testing", "Basic principles and techniques for software testing. Test requirements and management. Test design techniques, evaluation metrics, model-based testing, unit testing, system and integration testing. Software testing tools and programming projects.", "COM S 230; CPR E 310, COMS 309"),
+    ("SE 339", "Software Architecture and Design", "Modeling and design of software at the architectural level. Architectural styles. Basics of model-driven architecture. Object-oriented design and analysis. Iterative development and unified process. Design patterns. Design by contract. Component based design. Product families. Measurement theory and appropriate use of metrics in design. Designing for qualities such as performance, safety, security, reliability, reusability, etc. Analysis and evaluation of software architectures. Introduction to architecture definition languages. Basics of software evolution, reengineering, and reverse engineering. Case studies. Introduction to distributed system software.", "COM S 319", "", 3, "F,S", 0, 0),
+    ("SE 421", "Software Analysis and Verification for Safety and Security", "Significance of software safety and security; various facets of security in cyber-physical and computer systems; threat modeling for software safety and security; and categorization of software vulnerabilities. Software analysis and verification: mathematical foundations, data structures and algorithms, program comprehension, analysis, and verification tools; automated vs. human-on-the-loop approach to analysis and verification; and practical considerations of efficiency, accuracy, robustness, and scalability of analysis and verification. Cases studies with application and systems software; evolving landscape of software security threats and mitigation techniques. Understanding large software, implementing software analysis and verification algorithms.", "COM S 230;CPR E 310, COM S 309", "F,S", 0, 0),
+    ("SE 166", "Careers in Software Engineering", "Overview of the nature and scope of the software engineering profession, relationship of coursework to careers, and program of study planning. Offered on a satisfactory-fail basis only.", "","", 0, "F,S",0,0),
+    ("SE 491", "Senior Design Project I and Professionalism", "Preparing for entry to the workplace. Selected professional topics. Use of technical writing skills in developing project plan and design report; design review presentation. First of two-semester team-oriented, project design and implementation experience.", "SE 317, SE 339, ENGL 309;ENGL 314", "CPR E 308;COM S 352", 3, "F,S",0,0),
+    ("SE 492", "Senior Design Project II", "Second semester of a team design project experience. Emphasis on the successful implementation and demonstration of the design completed in E E 491, Cpr E 491, or S E 491 and the evaluation of project results. Technical writing of final project report; oral presentation of project achievements; project poster.", "SE 491", "", 2, "F,S",0,0),
+    -- Electives
+    ("SE 329", "Software Project Management", "Process-based software development. Capability Maturity Model (CMM). Project planning, cost estimation, and scheduling. Project management tools. Factors influencing productivity and success. Productivity metrics. Analysis of options and risks. Version control and configuration management. Inspections and reviews. Managing the testing process. Software quality metrics. Modern software engineering techniques and practices.", "COM S 309", "", 3, "F,S",0,0),
+    ("SE 362", "Object Oriented Analysis and Design", "COM S 228, MATH 165, ENGL 250", "", 3, "F,S",0,0),
+    ("SE 409", "Software Requirements Engineering","The requirements engineering process including elicitation, requirements analysis fundamentals, requirements specification and communication, and requirements evaluation. Modeling of functional and nonfunctional requirements, traceability, and requirements change management. Case studies and software projects." ,"COM S 309", "", 3, "F,S",0,0),
+    ("SE 416", "Software Evolution and Maintenance", "Practical importance of software evolution and maintenance, systematic defect analysis and debugging techniques, tracing and understanding large software, impact analysis, program migration and transformation, refactoring, tools for software evolution and maintenance, experimental studies and quantitative measurements of software evolution. Written reports and oral presentation.", "COM S 309", "", 3, "F,S", 0,0),
+    ("SE 419","Software Tools for Large Scale Data Analysis", "Software tools for managing and manipulating large volumes of data, external memory processing, large scale parallelism, and stream processing, data interchange formats. Weekly programming labs that involve the use of a parallel computing cluster.", "COM S 363;COM S 353;CPR E 308, COM S 228","",4,"F,S",0,0),
+    ("SE 422", "Cloud Computing - Software Development", "A comprehensive view of cloud computing with respect to software development from platforms and services to programming and infrastructure. Virtualization and containerization; cloud computing platforms, with examples from currently available cloud services; cloud services for data analytics, machine learning, and devops; programming frameworks for parallel computing in the cloud; distributed storage in the cloud; Container management. Includes homeworks and programming assignments. The programming assignments will be done in AWS.", "COMS 309;COM S 339, CPR E 381;COM S 321", "", 3, "F", 0,0),
+    ("SE ELECTIVE", "SE ELECTIVE", "DESC", "","",3,"F,S",0,0),
+    ("SPLM ELECTIVE", "SPLM ELECTIVE","DESC","","",3,"F,S",0,0),
+    ("GEN ED", "GENED", "DESC", "","",3,"F,S",0,0);
+INSERT INTO plans
+VALUES
+    (1, "COM S 101", 1, 1, "firstPlan"),
+    (1, "COM S 127", 1, 1, "firstPlan"),
+    (1, "MATH 165", 2, 1, "firstPlan"),
+    (1, "COM S 227", 2, 1, "firstPlan"),
+    (1, "COM S 228", 3, 1, "firstPlan"),
+    (1, "MATH 165", 2, 2, "firstPlan"),
+    (1, "COM S 227", 2, 2, "firstPlan");
+INSERT INTO requirements
+VALUES
+    ('S E', 0, 'test1', 3, 'credit'),
+    ('S E', 1, 'test2', 2, 'course'),
+    ('S E', 2, 'test3', 1, 'credit'),
+    ('COM S', 0, 'required', 22, 'course'),
+    ('COM S', 1, 'LVL300+', 15, 'credit'),
+    ('COM S', 2, 'LVL400+', 6, 'credit'),
+    ('COM S', 3, 'Stat Elective', 1, 'course'),
+    ('COM S', 4, 'Math Elective', 1, 'course'),
+    ('COM S', 5, 'Natural Science1', 1, 'course'),
+    ('COM S', 6, 'Natural Science1 Lab', 1, 'course'),
+    ('COM S', 7, 'Natural Science2', 1, 'course'),
+    ('COM S', 8, 'Natural Science2 Lab', 1, 'course'),
+    ('COM S', 9, 'English Elective', 1, 'course'),
+    ('COM S', 10, 'US Diversity', 3, 'credit'),
+    ('COM S', 11, 'International Perspective', 3, 'credit'),
+    ('COM S', 12, 'Social Science', 9, 'credit'),
+    ('COM S', 13, 'Arts and Humanities', 12, 'credit');
+-- ('COM S', 14, 'World Language', 2, 'courses'); -- this could be completed in high school without having taken any specific classes
+
+
+INSERT INTO fulfillments
+VALUES
+    ('S E', 'COM S 101', 0),
+    ('S E', 'COM S 127', 1),
+    ('S E', 'COM S 228', 2),
+    ('S E', 'COM S 227', 0),
+    ('S E', 'COM S 227', 1),
+    ('COM S', 'COM S 101', 0),
+    ('COM S', 'COM S 127', 0),
+    ('COM S', 'COM S 227', 0),
+    ('COM S', 'COM S 228', 0),
+    ('COM S', 'COM S 309', 0),
+    ('COM S', 'COM S 311', 0),
+    ('COM S', 'COM S 321', 0),
+    ('COM S', 'COM S 327', 0),
+    ('COM S', 'COM S 331', 0),
+    ('COM S', 'COM S 342', 0),
+    ('COM S', 'COM S 352', 0),
+    ('COM S', 'COM S 402', 0),
+    ('COM S', 'COM S 319', 1),
+    ('COM S', 'COM S 336', 1),
+-- ('COM S', 'COM S 407', 2),  -- clusterfuck. This ones prereqs are too confusing
+    ('COM S', 'COM S 410', 2),
+    ('COM S', 'COM S 412', 2),
+    ('COM S', 'COM S 413', 2),
+    ('COM S', 'COM S 417', 2),
+    ('COM S', 'PHIL 343', 0),
+    ('COM S', 'SP CM 212', 0),
+    ('COM S', 'LAS 203', 0),
+    ('COM S', 'MATH 165', 0),
+    ('COM S', 'MATH 166', 0),
+    ('COM S', 'COM S 230', 0),
+    ('COM S', 'STAT 330', 3),
+    ('COM S', 'STAT 341', 3),
+    ('COM S', 'STAT 347', 3),
+    ('COM S', 'MATH 207', 4),
+    ('COM S', 'MATH 265', 4),
+    ('COM S', 'MATH 266', 4),
+    ('COM S', 'MATH 267', 4),
+    ('COM S', 'MATH 304', 4),
+    ('COM S', 'MATH 314', 4),
+    ('COM S', 'MATH 317', 4),
+    ('COM S', 'BIOL 211', 5),
+    ('COM S', 'BIOL 211L', 6),
+    ('COM S', 'BIOL 212', 7),
+    ('COM S', 'BIOL 212L', 8),
+-- ('COM S', 'BIOL 255', 5), ADD THESE WHEN WE HAVE TIME
+-- ('COM S', 'BIOL 255L', 6),
+-- ('COM S', 'BIOL 256', 7),
+-- ('COM S', 'BIOL 256L', 8),
+-- ('COM S', 'CHEM 177', 5),
+-- ('COM S', 'CHEM 177L', 6),
+-- ('COM S', 'CHEM 178', 7),
+-- ('COM S', 'CHEM 178L', 8),
+-- ('COM S', 'GEOL 100', 5),
+-- ('COM S', 'GEOL 100L', 6),
+-- ('COM S', 'GEOL 102', 7),
+-- ('COM S', 'GEOL 102L', 8),
+-- ('COM S', 'PHYS 231', 5),
+-- ('COM S', 'PHYS 231L', 6),
+-- ('COM S', 'PHYS 232', 7),
+-- ('COM S', 'PHYS 232L', 8),
+    ('COM S', 'LIB 160', 0),
+    ('COM S', 'ENGL 150', 0),
+    ('COM S', 'ENGL 250', 0),
+    ('COM S', 'ENGL 302', 9),
+    ('COM S', 'ENGL 305', 9),
+    ('COM S', 'ENGL 309', 9),
+    ('COM S', 'ENGL 314', 9),
+    ('COM S', 'ARCH 321', 10),
+    ('COM S', 'HIST 353', 10),
+    ('COM S', 'AM IN 205', 10),
+    ('COM S', 'AF AM 201', 10),
+    ('COM S', 'ART H 280', 11),
+    ('COM S', 'ART H 280', 13),
+    ('COM S', 'CL ST 273', 11),
+    ('COM S', 'HIST 201', 11);
+
+
+INSERT INTO basePlanCourses
+VALUES
+    ("COM S", "COM S 101", 1),
+    ("COM S", "COM S 127", 1),
+    ("COM S", "MATH 165", 1),
+    ("COM S", "ENGL 150", 1),
+    ("COM S", "COM S 227", 2),
+    ("COM S", "MATH 166", 2),
+    ("COM S", "ENGL 250", 2),
+    ("COM S", "LIB 160", 2),
+    ("COM S", "COM S 228", 3),
+    ("COM S", "COM S 230", 3),
+    ("COM S", "LAS 203", 3),
+    ("COM S", "COM S 321", 4),
+    ("COM S", "COM S 311", 4),
+    ("COM S", "COM S 309", 5),
+    ("COM S", "SP CM 212", 5),
+    ("COM S", "COM S 327", 6),
+    ("COM S", "COM S 331", 6),
+    ("COM S", "PHIL 343", 6),
+    ("COM S", "COM S 342", 7),
+    ("COM S", "COM S 402", 8),
+    ("COM S", "COM S 352", 8),
+
+    ("SE", "SE 101", 1),
+    ("SE", "SE 185", 1),
+    ("SE", "ECON 101", 1),
+    ("SE", "CHEM 167", 1),
+    ("SE", "LIB 160", 1),
+    ("SE", "MATH 165", 1),
+    ("SE", "MATH 166", 2),
+    ("SE", "PHYS 231", 2),
+    ("SE", "PHYS 231L", 2),
+    ("SE", "SE 166", 2),
+    ("SE", "COM S 227", 2),
+    ("SE", "ENGL 150", 2),
+    ("SE", "MATH 267", 3),
+    ("SE", "SP CM 212", 3),
+    ("SE", "CPR E 281", 3),
+    ("SE", "COM S 228", 3),
+    ("SE", "ENGL 250", 3),
+    ("SE", "ART H 280", 4),
+    ("SE", "MATH 207", 4),
+    ("SE", "CPR E 288", 4),
+    ("SE", "CPR E 310", 4),
+    ("SE", "COM S 319", 4),
+    ("SE", "PHIL 343", 5),
+    ("SE", "CPR E 381", 5),
+    ("SE", "COM S 311", 5),
+    ("SE", "COM S 309", 5),
+    ("SE", "COM S 363"),
+    ("SE", "GEN ED", 6),
+    ("SE", "COM S 352", 6),
+    ("SE", "SE 317", 6),
+    ("SE", "SE 339", 6),
+    ("SE", "ENGL 314"),
+    ("SE", "SE 329", 7),
+    ("SE", "COM S 331", 7),
+    ("SE", "STAT 330", 7),
+    ("SE", "SE 421", 7),
+    ("SE", "SE 491", 7),
+    ("SE", "COM S 410", 8),
+    ("SE", "SE 362", 8),
+    ("SE", "SE 409", 8),
+    ("SE", "COM S 327", 8),
+    ("SE", "COM S 252", 8),
+    ("SE", "SE 492", 8);
+
+INSERT INTO basePlanClusters
+VALUES
+    ("COM S", '12', 1),
+    ("COM S", '13', 2),
+    ("COM S", '5', 3),
+    ("COM S", '6', 3),
+    ("COM S", '12', 3),
+-- ("COM S", '14', 3), -- If they already have world language covered from high school, this is ELECTIVE
+    ("COM S", '1,2', 4), -- This can be 300+ elective OR 400+ elective
+    ("COM S", '7', 4),
+    ("COM S", '8', 4),
+-- ("COM S", '14', 4) If they already have world language covered from high school, this is ELECTIVE
+    ("COM S", '1,2', 5), -- This can be 300+ elective OR 400+ elective
+    ("COM S", '4', 5),
+    ("COM S", '13', 5),
+    ("COM S", '3', 6),
+    ("COM S", '9', 6),
+    ("COM S", '1', 7),
+    ("COM S", '2', 7),
+    ("COM S", '12;10,12;11', 7), -- social science AND (us div OR international perspective)
+-- ("COM S", 'elective', 7),
+    ("COM S", '2', 8),
+    ("COM S", '13;10,13;11', 8); -- arts&Humanities AND (us div OR international perspective)
+-- ("COM S", 'elective', 8);
+insert into advisorChats values (1,"Logans Plan 1", "krclark@iastate.edu", "lte@iastate.edu" , "HIYA!");

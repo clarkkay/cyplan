@@ -1,0 +1,11 @@
+-- removes Tables
+DROP TABLE friends;
+DROP TABLE comments;
+DROP TABLE basePlanCourses;
+DROP TABLE basePlanClusters;
+DROP TABLE fulfillments;
+DROP TABLE requirements;
+DROP TABLE plans;
+DROP TABLE users;
+DROP TABLE degrees;
+DROP TABLE courses;

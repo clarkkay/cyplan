@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DropDownMenu">
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="156dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/cyplan_logo_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Home Button (Student) -->
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Schedule Builder"
+        android:backgroundTint="@color/red"
+        android:textColor="@android:color/white"
+        android:onClick="goToHome"
+        app:layout_constraintTop_toBottomOf="@id/appLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <!-- Search Student Button (Advisor) -->
+    <Button
+        android:id="@+id/searchStudentButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Search Student"
+        android:backgroundTint="@color/red"
+        android:textColor="@android:color/white"
+        android:onClick="goToSearchStudent"
+        app:layout_constraintTop_toBottomOf="@id/appLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <!-- Profile Button (Student) -->
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:backgroundTint="@color/red"
+        android:textColor="@android:color/white"
+        android:onClick="goToProfile"
+        app:layout_constraintTop_toBottomOf="@id/homeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <!-- View Saved Plans Button (Student) -->
+    <Button
+        android:id="@+id/viewSavedPlansButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Saved Plans"
+        android:onClick="goToSavedPlans"
+        android:backgroundTint="@color/red"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/profileButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <!-- View Chats Button (Student) -->
+    <Button
+        android:id="@+id/chatsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Friends"
+        android:backgroundTint="@color/red"
+        android:textColor="@android:color/white"
+        android:onClick="goToViewChats"
+        app:layout_constraintTop_toBottomOf="@+id/viewSavedPlansButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+
+    <!-- Log Out Button (at the bottom) (Both)-->
+    <Button
+        android:id="@+id/logOutButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:backgroundTint="@color/red"
+        android:textColor="@android:color/white"
+        android:onClick="goToLogOut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

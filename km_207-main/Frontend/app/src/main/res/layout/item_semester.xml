@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:id="@+id/semesterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#333333"
+        android:text="Semester"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/coursesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="300dp"
+        android:layout_marginTop="24dp"
+        android:background="#FAFAFA"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:outlineProvider="background"
+        android:radius="16dp">
+    </LinearLayout>
+</LinearLayout>
+

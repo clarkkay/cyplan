@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllChatsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/red"
+        android:id="@+id/toolbar">
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hamburger"
+            android:onClick="goToMenu"
+            android:hint="MENU"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="userName's Friends"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/menuButton"
+            android:id="@+id/textViewTitle"/>
+
+        <ImageButton
+            android:id="@+id/search_user_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="4dp"
+            android:src="@drawable/icon_search"
+            android:onClick="goToSearch"/>
+
+    </RelativeLayout>
+
+    <!-- Friend Requests Section -->
+    <LinearLayout
+        android:id="@+id/friendRequestsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Friend Requests:"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+        <!-- Dynamic content will be added here -->
+
+    </LinearLayout>
+
+    <!-- Friends List Section -->
+    <LinearLayout
+        android:id="@+id/friendsList"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/friendRequestsList"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+
+
+</RelativeLayout>
